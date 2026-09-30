@@ -1,0 +1,18 @@
+leader_traits = {
+	GRW_rework_iron_pragmatist = {
+		random = no
+		production_speed_buildings_factor = 0.02
+		industrial_capacity_factory = 0.02
+		production_factory_efficiency_gain_factor = 0.02
+		production_factory_max_efficiency_factor = 0.02
+		communism_drift = 0.05
+	}
+	GRW_rework_peoples_intercessor = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		compliance_gain = 0.012
+		resistance_target = -0.15
+		army_attack_factor = 0.10
+	}
+}

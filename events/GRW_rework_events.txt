@@ -1,0 +1,481 @@
+add_namespace = GRW_rework    # Не забыть про то что нужно перелапатить ивенты с оригинала
+country_event = {         #Миша если ты это читаешь то все работает на божьем слове, учитывая что мне лень делать лог систему. Да и я бы сам бы писал на английском, но ошибок в локализации было бы триллард я лучше уж через нейронку или переводчик проганю.
+	id = GRW_rework.1
+	title = "Famine Returns"
+	desc = "The measures we took were only temporary. The specter of famine haunts us once more."
+	picture = GFX_event_medieval_village
+	is_triggered_only = yes
+	option = {
+		name = "We need a permanent solution."
+		add_ideas = GRW_risk_of_famine
+		clr_country_flag = GRW_famine_delayed
+	}
+}
+country_event = {
+	id = GRW_rework.2
+	title = GRW_rework.2.t
+	desc = GRW_rework.2.d
+	picture = GFX_event_griffon_city_fighting
+	is_triggered_only = yes
+	option = {
+		name = GRW_rework.2.a
+		add_ideas = the_final_push_GRW
+		add_command_power = 30
+	}
+}
+country_event = {
+	id = GRW_rework.3
+	title = GRW_rework.3.t
+	desc = GRW_rework.3.d
+	picture = GFX_event_griffons_machine_gun
+	is_triggered_only = yes
+	option = {
+		name = GRW_rework.3.a
+		hidden_effect = {
+			set_province_controller = 1827
+			set_province_controller = 7814
+			set_province_controller = 1054
+			set_province_controller = 10698
+			set_province_controller = 1893
+			load_oob = "GRW_militia"
+		}
+	}
+}
+country_event = {
+	id = GRW_rework.4
+	title = GRW_rework.4.t
+	desc = GRW_rework.4.d
+	picture = GFX_event_griffon_mountain
+	is_triggered_only = yes
+	option = {
+		name = GRW_rework.4.c
+		trigger = {
+			385 = {
+				is_controlled_by = BRF
+			}
+		}
+		hidden_effect = {
+			set_province_controller = 10207
+			set_province_controller = 1348
+			set_province_controller = 10250
+			load_oob = "GRW_partisans_port"
+		}
+	}
+	option = {
+		name = GRW_rework.4.b
+		trigger = {
+			508 = {
+				is_controlled_by = BRF
+			}
+		}
+		hidden_effect = {
+			set_province_controller = 12407
+			set_province_controller = 4125
+			set_province_controller = 12053
+			set_province_controller = 12017
+			load_oob = "GRW_partisans_kiv"
+		}
+	}
+	option = {
+		name = GRW_rework.4.a
+		trigger = {
+			589 = {
+				is_controlled_by = BRF
+			}
+		}
+		hidden_effect = {
+			set_province_controller = 12232
+			set_province_controller = 10232
+			set_province_controller = 12436
+			set_province_controller = 4085
+			load_oob = "GRW_partisans_rice"
+		}
+	}
+}
+country_event = {
+	id = GRW_rework.5
+	title = GRW_rework.5.t
+	desc = GRW_rework.5.d
+	picture = GFX_report_event_griffon_military
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.5.a
+		add_manpower = 15000
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 }
+		add_ideas = GRW_last_argument_idea
+	}
+}
+
+
+
+country_event = {
+	id = GRW_rework.6
+	title = GRW_rework.6.t
+	desc = GRW_rework.6.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.6.a
+		
+		# Effect: Rename country
+		set_cosmetic_tag = GRW_republic_cosmetic
+		
+		# Effect: Add Idea "New Republic"
+		add_ideas = GRW_rework_new_republic
+	}
+}
+
+country_event = {
+	id = GRW_rework.7
+	title = GRW_rework.7.t
+	desc = GRW_rework.7.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.7.a
+		add_ideas = GRW_rework_central_committee
+	}
+}
+
+country_event = {
+	id = GRW_rework.8
+	title = GRW_rework.8.t
+	desc = GRW_rework.8.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.8.a
+		
+		# Teresa
+		GRW_Theresa = {
+			remove_unit_leader_role = yes
+		}
+		add_advisor_role = {
+			character = GRW_Theresa
+			advisor = {
+				slot = political_advisor
+				idea_token = GRW_rework_Theresa_advisor
+				traits = { GRW_rework_iron_pragmatist }
+			}
+		}
+
+		# Rayne
+		add_advisor_role = {
+			character = GRW_rain_twister
+			advisor = {
+				slot = political_advisor
+				idea_token = GRW_rework_rain_twister_advisor
+				traits = { GRW_rework_peoples_intercessor }
+			}
+		}
+		
+		GRW_rain_twister = {
+			remove_unit_leader_role = yes
+		}
+		add_field_marshal_role = {
+			character = GRW_rain_twister
+			traits = { infantry_officer pony_race_trait trickster }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+}
+
+country_event = {
+	id = GRW_rework.10
+	title = GRW_rework.10.t
+	desc = GRW_rework.10.d
+	picture = GFX_report_event_griffon_military
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRW_rework.10.a
+		
+		swap_ideas = {
+			remove_idea = GRW_rework_no_regular_army
+			add_idea = GRW_rework_prywhen_army
+		}
+	}
+}
+
+country_event = {
+	id = GRW_rework.11
+	title = GRW_rework.11.t
+	desc = GRW_rework.11.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRW_rework.11.a
+		add_political_power = 200
+		add_ideas = GRW_ray_of_truth_idea
+	}
+}
+
+country_event = {
+	id = GRW_rework.12
+	title = GRW_rework.12.t
+	desc = GRW_rework.12.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRW_rework.12.a
+		BAN = {
+			every_owned_state = {
+				add_core_of = ROOT
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BAN
+		}
+	}
+}
+
+country_event = {
+	id = GRW_rework.13
+	title = GRW_rework.13.t
+	desc = GRW_rework.13.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRW_rework.13.a
+		590 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = GRW_rework_complete_chaos
+				add_idea = GRW_rework_recovering_economy
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GRW_rework.9
+	title = GRW_rework.9.t
+	desc = GRW_rework.9.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.9.a
+	}
+}
+
+country_event = {
+	id = GRW_rework.14
+	title = GRW_rework.14.t
+	desc = GRW_rework.14.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.14.a
+	}
+}
+
+country_event = {
+	id = GRW_rework.15
+	title = GRW_rework.15.t
+	desc = GRW_rework.15.d
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.15.a
+		set_rule = { can_create_factions = yes }
+		create_faction = GRW_liberation_front_faction
+	}
+}
+
+country_event = {
+	id = GRW_rework.16
+	title = GRW_rework.16.t
+	desc = GRW_rework.16.d
+	picture = GFX_report_event_griffon_military
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.16.a
+	}
+}
+
+country_event = {
+	id = GRW_rework.17
+	title = GRW_rework.17.t
+	desc = GRW_rework.17.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.17.a
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = GRY
+					is_core_of = GRU
+					is_core_of = LUS
+					is_owned_by = GRY
+					is_owned_by = GRU
+					is_owned_by = LUS
+				}
+			}
+			add_claim_by = ROOT
+		}
+		hidden_effect = {                       #Миша если ты это читаешь то все работает на божьем слове, учитывая что мне лень делать лог систему
+			588 = { set_state_category = rural }
+			589 = { set_state_category = town }
+			590 = { set_state_category = town }
+			605 = { set_state_category = town }
+			651 = { set_state_category = town }
+		}
+	}
+}
+
+country_event = {
+	id = GRW_rework.18
+	title = GRW_rework.18.t
+	desc = GRW_rework.18.d
+	picture = GFX_report_event_grif_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.18.a
+		add_timed_idea = { idea = GRW_light_of_ewi_idea days = 365 }
+	}
+}
+
+country_event = {
+	id = GRW_rework.19
+	title = GRW_rework.19.t
+	desc = GRW_rework.19.d
+	picture = GFX_report_event_grif_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.19.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 80
+				tag = LUS
+			}
+			modifier = {
+				factor = 0
+				tag = GRY
+			}
+			modifier = {
+				factor = 0
+				tag = GRU
+			}
+			modifier = {
+				add = 20
+				FROM = { has_army_size = { size > 20 } }
+			}
+			modifier = {
+				add = 10
+				FROM = { num_of_factories > 20 }
+			}
+			modifier = {
+				factor = 0
+				has_army_size = { size > 15 }
+			}
+		}
+		FROM = { country_event = { id = GRW_rework.20 days = 1 } }
+	}
+	option = {
+		name = GRW_rework.19.b
+		ai_chance = {
+			base = 100
+		}
+		FROM = { country_event = { id = GRW_rework.21 days = 1 } }
+	}
+}
+
+country_event = {
+	id = GRW_rework.20
+	title = GRW_rework.20.t
+	desc = GRW_rework.20.d
+	picture = GFX_report_event_grif_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.20.a
+		annex_country = { target = FROM transfer_troops = yes }
+	}
+}
+
+country_event = {
+	id = GRW_rework.21
+	title = GRW_rework.21.t
+	desc = GRW_rework.21.d
+	picture = GFX_report_event_grif_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.21.a
+		declare_war_on = { target = FROM type = annex_everything }
+	}
+}
+
+country_event = {
+	id = GRW_rework.22
+	title = GRW_rework.22.t
+	desc = GRW_rework.22.d 
+	picture = GFX_report_event_grif_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = GRW_rework.22.a
+		LUS = {
+			every_owned_state = {
+				add_core_of = ROOT
+			}
+		}
+		GRY = {
+			every_owned_state = {
+				add_core_of = ROOT
+			}
+		}
+		GRU = {
+			every_owned_state = {
+				add_core_of = ROOT
+			}
+		}
+		add_ideas = GRW_economy_shock1
+		add_ideas = GRW_hq_shock1
+		add_ideas = GRW_administrative_shock1
+	}
+}

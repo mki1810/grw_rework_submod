@@ -1,0 +1,1682 @@
+focus_tree = {
+	id = GRW_rework_tree
+	country = {
+		factor = 10
+		factor = 0
+		modifier = {
+			add = 10
+			add = 1000
+			tag = GRW
+		}
+	}
+	default = no
+	focus = {
+		id = GRW_rework_focus_1
+		icon = GFX_goal_unknown
+		allow_branch = {
+			NOT = {
+				has_country_flag = GRW_civil_war_won_flag
+			}
+		}
+		x = -1
+		y = 0
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_focus_1"
+			country_event = {
+				id = GRW_rework.2
+				hours = 6
+			}
+		}
+	}
+	focus = {
+		id = GRW_rework_potato
+		icon = GFX_goal_communist_potatoes
+		x = -1
+		y = 1
+		cost = 3
+		completion_reward = {
+			custom_effect_tooltip = RICE_FIELDS_FAMINE
+		}
+		prerequisite = {
+			focus = GRW_rework_focus_1
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = GRW_rework_milita
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_milita"
+			country_event = {
+				id = GRW_rework.3
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_potato
+		}
+	}
+	focus = {
+		id = GRW_rework_partisan
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_partisan"
+			country_event = {
+				id = GRW_rework.4
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_potato
+		}
+	}
+	focus = {
+		id = GRW_rework_newequip
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_newequip"
+			set_technology = {
+				infantry_weapons = 1
+				interwar_artillery = 1
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_milita
+			focus = GRW_rework_partisan
+		}
+	}
+	focus = {
+		id = GRW_rework_helpbat
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		cost = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_helpbat"
+			add_ideas = ricefield_training_ideaGRW
+			army_experience = 25
+			add_manpower = 15000
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_ideas = ideological_loyalty_spirit
+			}
+			custom_effect_tooltip = RICE_FIELDS_FAMINE
+		}
+		mutually_exclusive = {
+			focus = GRW_rework_artely
+		}
+		prerequisite = {
+			focus = GRW_rework_newequip
+		}
+	}
+	focus = {
+		id = GRW_rework_artely
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_artely"
+			add_ideas = GRW_peasant_artels_idea
+			custom_effect_tooltip = RICE_FIELDS_FAMINE
+		}
+		mutually_exclusive = {
+			focus = GRW_rework_helpbat
+		}
+		prerequisite = {
+			focus = GRW_rework_newequip
+		}
+	}
+	focus = {
+		id = GRW_rework_lastargument
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		cost = 1.5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_rework_lastargument"
+			country_event = {
+				id = GRW_rework.5
+				days = 1
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_helpbat
+			focus = GRW_rework_artely
+		}
+	}
+	focus = {
+		id = GRW_rework_zatychkaneudolat
+		icon = GFX_goal_unknown
+		x = -10
+		y = 0
+		cost = 10
+		completion_reward = {}
+	}
+	focus = {
+		id = GRW_rework_victory_of_the_people
+		icon = GFX_goal_unknown
+		x = 13
+		y = 0
+		allow_branch = {
+			has_country_flag = GRW_civil_war_won_flag
+		}
+		cost = 1
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.6
+				hours = 6
+			}
+		}
+	}
+	focus = {
+		id = GRW_rework_kontrrevolution
+		icon = GFX_goal_unknown
+		x = 13
+		y = 1
+		cost = 3
+		select_effect = {
+			country_event = {
+				id = prywhen.24
+			}
+			country_event = {
+				id = prywhen.20
+				days = 15
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = prywhen.16
+				hours = 2
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_victory_of_the_people
+		}
+	}
+	focus = {
+		id = GRW_rework_agroreform
+		icon = GFX_goal_unknown
+		x = 21
+		y = 2
+		cost = 4
+		select_effect = {
+			country_event = {
+				id = GRW_rework.9
+				days = 10
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_famine_beaten_tt
+			hidden_effect = {
+				clr_country_flag = GRW_famine_risk
+				remove_ideas = GRW_risk_of_famine
+			}
+			add_ideas = GRW_rework_agrarian_reform_idea
+		}
+		prerequisite = {
+			focus = GRW_rework_kontrrevolution
+		}
+	}
+	focus = {
+		id = GRW_rework_libarmygrif
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 4
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_reform_army_tt
+			hidden_effect = {
+				country_event = {
+					id = GRW_rework.10
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_kontrrevolution
+		}
+	}
+	focus = {
+		id = GRW_rework_firstcongress
+		icon = GFX_goal_unknown
+		x = 13
+		y = 2
+		cost = 4
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.7
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_kontrrevolution
+		}
+	}
+	focus = {
+		id = GRW_rework_cadri
+		icon = GFX_goal_unknown
+		x = 8
+		y = 2
+		cost = 4
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.8
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_kontrrevolution
+		}
+	}
+	focus = {
+		id = GRW_rework_beginlikbez
+		icon = GFX_goal_unknown
+		x = 9
+		y = 3
+		cost = 4
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_likbez_tt
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = lack_of_scientists1
+					add_idea = lack_of_scientists2
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_cadri
+		}
+	}
+	focus = {
+		id = GRW_rework_armyreform1
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		cost = 4
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_armyreform1_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_rework_prywhen_army
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_prywhen_army
+						add_idea = GRW_rework_prywhen_army_2
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_libarmygrif
+		}
+	}
+	focus = {
+		id = GRW_rework_armyreform2
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 3.7
+		completion_reward = {
+			add_ideas = GRW_rework_prywhen_airforce
+			air_experience = 50
+		}
+		prerequisite = {
+			focus = GRW_rework_libarmygrif
+		}
+	}
+	focus = {
+		id = GRW_rework_imperkadri
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 4
+		completion_reward = {
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = poor_science_base
+				add_idea = better_science_base
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_cadri
+		}
+	}
+	focus = {
+		id = GRW_rework_likbez2
+		icon = GFX_goal_unknown
+		x = 8
+		y = 4
+		cost = 2.9
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_likbez2_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = lack_of_scientists3
+					}
+					swap_ideas = {
+						remove_idea = lack_of_scientists3
+						add_idea = no_lack_of_scientists
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = lack_of_scientists2
+						add_idea = lack_of_scientists3
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_beginlikbez
+		}
+	}
+	focus = {
+		id = GRW_rework_school
+		icon = GFX_goal_unknown
+		x = 10
+		y = 4
+		cost = 2.9
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_likbez2_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = lack_of_scientists3
+					}
+					swap_ideas = {
+						remove_idea = lack_of_scientists3
+						add_idea = no_lack_of_scientists
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = lack_of_scientists2
+						add_idea = lack_of_scientists3
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_beginlikbez
+		}
+	}
+	focus = {
+		id = GRW_rework_unik
+		icon = GFX_goal_unknown
+		x = 6
+		y = 4
+		cost = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = better_science_base
+				add_idea = big_science_base
+			}
+			414 = {
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					instant_build = yes
+					province = 1010
+				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 1
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 1
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_imperkadri
+		}
+	}
+	focus = {
+		id = GRW_rework_armyreform3
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 4
+		completion_reward = {
+			add_ideas = GRW_rework_armyreform3
+		}
+		prerequisite = {
+			focus = GRW_rework_armyreform1
+		}
+	}
+	focus = {
+		id = GRW_rework_avia
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 3.7
+		completion_reward = {
+			add_tech_bonus = {
+				name = GRW_rework_aviation_bonus
+				bonus = 1.0
+				uses = 3
+				category = air_equipment
+			}
+			set_technology = {
+				iw_small_airframe = 1
+				aa_lmg = 1
+				engines_1 = 1
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_armyreform2
+		}
+	}
+	focus = {
+		id = GRW_rework_aviaunik
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 3
+			}
+			add_tech_bonus = {
+				name = GRW_rework_rocket_bonus
+				ahead_reduction = 2
+				bonus = 3.0
+				uses = 1
+				technology = experimental_rockets
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_unik
+		}
+		prerequisite = {
+			focus = GRW_rework_avia
+		}
+	}
+	focus = {
+		id = GRW_rework_armyre4
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		cost = 2
+		completion_reward = {
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_no_regular_army
+							has_idea = GRW_rework_no_regular_army_re4
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_no_regular_army
+						add_idea = GRW_rework_no_regular_army_re4
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_prywhen_army
+							has_idea = GRW_rework_prywhen_army_re4
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_prywhen_army
+						add_idea = GRW_rework_prywhen_army_re4
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_prywhen_army_2
+							has_idea = GRW_rework_prywhen_army_3
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_prywhen_army_2
+						add_idea = GRW_rework_prywhen_army_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { has_idea = GRW_rework_no_regular_army }
+								NOT = { has_idea = GRW_rework_no_regular_army_re4 }
+								NOT = { has_idea = GRW_rework_prywhen_army }
+								NOT = { has_idea = GRW_rework_prywhen_army_re4 }
+								NOT = { has_idea = GRW_rework_prywhen_army_2 }
+								NOT = { has_idea = GRW_rework_prywhen_army_3 }
+							}
+							has_idea = GRW_rework_armyre4_upgrade
+						}
+					}
+					add_ideas = GRW_rework_armyre4_upgrade
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_rework_no_regular_army
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_no_regular_army
+						add_idea = GRW_rework_no_regular_army_re4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_prywhen_army
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_prywhen_army
+						add_idea = GRW_rework_prywhen_army_re4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_prywhen_army_2
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_prywhen_army_2
+						add_idea = GRW_rework_prywhen_army_3
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_armyreform3
+		}
+	}
+	focus = {
+		id = GRW_rework_armyre5
+		icon = GFX_goal_unknown
+		x = 3
+		y = 5
+		cost = 2
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = GRW_rework_land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+			}
+			add_tech_bonus = {
+				name = GRW_rework_land_mastery
+				bonus = 0.2
+				days = 180
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = GRW_rework_naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+			}
+			add_tech_bonus = {
+				name = GRW_rework_naval_mastery
+				bonus = 0.2
+				days = 180
+				category = naval_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = GRW_rework_air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+			}
+			add_tech_bonus = {
+				name = GRW_rework_air_mastery
+				bonus = 0.2
+				days = 180
+				category = air_doctrine
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_armyreform3
+		}
+	}
+	focus = {
+		id = GRW_rework_bandits
+		icon = GFX_goal_unknown
+		x = 13
+		y = 3
+		cost = 3
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.12
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_firstcongress
+		}
+	}
+	focus = {
+		id = GRW_rework_fromliestothetruth
+		icon = GFX_goal_unknown
+		x = 17
+		y = 2
+		cost = 4
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.11
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_kontrrevolution
+		}
+	}
+	focus = {
+		id = GRW_rework_happy
+		icon = GFX_goal_unknown
+		x = 16
+		y = 3
+		cost = 2
+		completion_reward = {
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_ray_of_truth_idea_4
+							has_idea = GRW_ray_of_truth_idea_3
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea_4
+						add_idea = GRW_ray_of_truth_idea_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_ray_of_truth_idea
+							has_idea = GRW_ray_of_truth_idea_2
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_4
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea
+						add_idea = GRW_ray_of_truth_idea_2
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { has_idea = GRW_ray_of_truth_idea }
+								NOT = { has_idea = GRW_ray_of_truth_idea_4 }
+								NOT = { has_idea = GRW_ray_of_truth_idea_2 }
+								NOT = { has_idea = GRW_ray_of_truth_idea_3 }
+							}
+							has_idea = GRW_rework_happy_upgrade
+						}
+					}
+					add_ideas = GRW_rework_happy_upgrade
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_ray_of_truth_idea_4
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea_4
+						add_idea = GRW_ray_of_truth_idea_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_ray_of_truth_idea
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_4
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea
+						add_idea = GRW_ray_of_truth_idea_2
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_4
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_2
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_3
+						}
+					}
+					add_ideas = GRW_rework_happy_upgrade
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_fromliestothetruth
+		}
+	}
+	focus = {
+		id = GRW_rework_happy2
+		icon = GFX_goal_unknown
+		x = 18
+		y = 3
+		cost = 2
+		completion_reward = {
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_ray_of_truth_idea_2
+							has_idea = GRW_ray_of_truth_idea_3
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea_2
+						add_idea = GRW_ray_of_truth_idea_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_ray_of_truth_idea
+							has_idea = GRW_ray_of_truth_idea_4
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_2
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea
+						add_idea = GRW_ray_of_truth_idea_4
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { has_idea = GRW_ray_of_truth_idea }
+								NOT = { has_idea = GRW_ray_of_truth_idea_2 }
+								NOT = { has_idea = GRW_ray_of_truth_idea_3 }
+								NOT = { has_idea = GRW_ray_of_truth_idea_4 }
+							}
+							has_idea = GRW_rework_happy2_upgrade
+						}
+					}
+					add_ideas = GRW_rework_happy2_upgrade
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_ray_of_truth_idea_2
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea_2
+						add_idea = GRW_ray_of_truth_idea_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_ray_of_truth_idea
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_2
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_ray_of_truth_idea
+						add_idea = GRW_ray_of_truth_idea_4
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_2
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_3
+						}
+						NOT = {
+							has_idea = GRW_ray_of_truth_idea_4
+						}
+					}
+					add_ideas = GRW_rework_happy2_upgrade
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_fromliestothetruth
+		}
+	}
+	focus = {
+		id = GRW_rework_indre1
+		icon = GFX_goal_unknown
+		x = 22
+		y = 3
+		cost = 5
+		completion_reward = {
+			set_country_flag = GRW_indre1_cooldown
+			custom_effect_tooltip = GRW_rework_indre1_tt
+			country_event = {
+				id = GRW_rework.13
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_agroreform
+		}
+	}
+	focus = {
+		id = GRW_rework_pol1
+		icon = GFX_goal_unknown
+		x = 12
+		y = 4
+		cost = 3
+		completion_reward = {
+			add_ideas = GRW_rework_north_experience
+		}
+		prerequisite = {
+			focus = GRW_rework_bandits
+		}
+		mutually_exclusive = {
+			focus = GRW_rework_pol2
+		}
+	}
+	focus = {
+		id = GRW_rework_pol2
+		icon = GFX_goal_unknown
+		x = 14
+		y = 4
+		cost = 3
+		completion_reward = {
+			add_ideas = GRW_rework_own_path
+		}
+		prerequisite = {
+			focus = GRW_rework_bandits
+		}
+		mutually_exclusive = {
+			focus = GRW_rework_pol1
+		}
+	}
+	focus = {
+		id = GRW_rework_food
+		icon = GFX_goal_unknown
+		x = 20
+		y = 3
+		cost = 3
+		select_effect = {
+			country_event = {
+				id = GRW_rework.14
+				days = 14
+			}
+		}
+		completion_reward = {
+			add_ideas = GRW_rework_welfare_state
+		}
+		prerequisite = {
+			focus = GRW_rework_agroreform
+		}
+	}
+	focus = {
+		id = GRW_rework_happy3
+		icon = GFX_goal_unknown
+		x = 17
+		y = 4
+		cost = 3
+		completion_reward = {
+			508 = {
+				add_manpower = 200000
+				set_state_category = large_city
+			}
+			385 = {
+				add_manpower = 150000
+				set_state_category = large_city
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_happy2
+			focus = GRW_rework_happy
+		}
+	}
+	focus = {
+		id = GRW_rework_food2
+		icon = GFX_goal_unknown
+		x = 19
+		y = 4
+		cost = 3
+		completion_reward = {
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_welfare_state
+							has_idea = GRW_rework_welfare_state_2
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_welfare_state
+						add_idea = GRW_rework_welfare_state_2
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { has_idea = GRW_rework_welfare_state }
+								NOT = { has_idea = GRW_rework_welfare_state_2 }
+							}
+							has_idea = GRW_rework_welfare_upgrade
+						}
+					}
+					add_ideas = GRW_rework_welfare_upgrade
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_rework_welfare_state
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_welfare_state
+						add_idea = GRW_rework_welfare_state_2
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_idea = GRW_rework_welfare_state
+						}
+						NOT = {
+							has_idea = GRW_rework_welfare_state_2
+						}
+					}
+					add_ideas = GRW_rework_welfare_upgrade
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_food
+		}
+	}
+	focus = {                            #Если кто то читает, как же я эту матрешку сделал? Вообще хотел я что бы игре это нормально отобрадало через динамические не работало толком как я хотел да и сам не прям вау знаком с динамическим духами. Я решил сделать такую матрешку выбора у меня не было особо и думал что да как, на листочке я представлял это ввиде графическом, чем то похожим на графы что то я писал нейронке - да, но суть в том что я это сперва делал через предсатвление графическом с закономернастями духов что бы не запутатся потому что у меня так и духами армии и с духами на экономику и просто обычные даже духи, ну как то так. По итогу все работает но потратил я на это много времени что бы просто придти к логике закономерности
+		id = GRW_rework_indre2
+		icon = GFX_goal_unknown
+		x = 21
+		y = 4
+		cost = 3
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_technology = {
+				basic_train = 1
+			}
+			effect_tooltip = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_recovering_economy
+							has_idea = GRW_rework_recovering_economy_2
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy
+						add_idea = GRW_rework_recovering_economy_2
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_recovering_economy_4
+							has_idea = GRW_rework_recovering_economy_3
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy_4
+						add_idea = GRW_rework_recovering_economy_3
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRW_rework_peoples_economy_no_repair
+							has_idea = GRW_rework_peoples_economy
+						}
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_peoples_economy_no_repair
+						add_idea = GRW_rework_peoples_economy
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								NOT = { has_idea = GRW_rework_recovering_economy }
+								NOT = { has_idea = GRW_rework_recovering_economy_4 }
+								NOT = { has_idea = GRW_rework_peoples_economy_no_repair }
+								NOT = { has_idea = GRW_rework_recovering_economy_2 }
+								NOT = { has_idea = GRW_rework_recovering_economy_3 }
+								NOT = { has_idea = GRW_rework_peoples_economy }
+							}
+							has_idea = GRW_rework_indre2_upgrade
+						}
+					}
+					add_ideas = GRW_rework_indre2_upgrade
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy
+						add_idea = GRW_rework_recovering_economy_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy_4
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy_4
+						add_idea = GRW_rework_recovering_economy_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_peoples_economy_no_repair
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_peoples_economy_no_repair
+						add_idea = GRW_rework_peoples_economy
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_idea = GRW_rework_recovering_economy
+						}
+						NOT = {
+							has_idea = GRW_rework_recovering_economy_4
+						}
+						NOT = {
+							has_idea = GRW_rework_peoples_economy_no_repair
+						}
+						NOT = {
+							has_idea = GRW_rework_recovering_economy_2
+						}
+						NOT = {
+							has_idea = GRW_rework_recovering_economy_3
+						}
+						NOT = {
+							has_idea = GRW_rework_peoples_economy
+						}
+					}
+					add_ideas = GRW_rework_indre2_upgrade
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_indre1
+		}
+	}
+	focus = {
+		id = GRW_rework_indre3
+		icon = GFX_goal_unknown
+		x = 23
+		y = 4
+		cost = 5
+		available = {
+			has_completed_focus = GRW_rework_indre1
+			if = {
+				limit = {
+					has_completed_focus = GRW_rework_indre1
+				}
+				custom_trigger_tooltip = {
+					tooltip = GRW_indre1_cooldown_tt
+					has_country_flag = {
+						flag = GRW_indre1_cooldown
+						days > 49
+					}
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = GRW_indre3_cooldown
+			custom_effect_tooltip = GRW_rework_indre3_tt
+			651 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy
+						add_idea = GRW_rework_recovering_economy_4
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy_2
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy_2
+						add_idea = GRW_rework_recovering_economy_3
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_indre1
+		}
+	}
+	focus = {
+		id = GRW_rework_ind1
+		icon = GFX_goal_unknown
+		x = 20
+		y = 5
+		cost = 3
+		completion_reward = {
+			588 = {
+				add_resource = {
+					type = coal
+					amount = 25
+				}
+				add_resource = {
+					type = steel
+					amount = 32
+				}
+			}
+			605 = {
+				add_resource = {
+					type = aluminium
+					amount = 15
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_indre2
+			focus = GRW_rework_food2
+		}
+	}
+	focus = {
+		id = GRW_rework_indre4
+		icon = GFX_goal_unknown
+		x = 22
+		y = 5
+		cost = 4
+		available = {
+			has_completed_focus = GRW_rework_indre3
+			if = {
+				limit = {
+					has_completed_focus = GRW_rework_indre3
+				}
+				custom_trigger_tooltip = {
+					tooltip = GRW_indre3_cooldown_tt
+					has_country_flag = {
+						flag = GRW_indre3_cooldown
+						days > 49
+					}
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_indre4_tt
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = outdated_industry
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy
+						add_idea = GRW_rework_peoples_economy_no_repair
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy_2
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy_2
+						add_idea = GRW_rework_peoples_economy
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy_3
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy_3
+						add_idea = GRW_rework_peoples_economy
+					}
+				}
+				if = {
+					limit = {
+						has_idea = GRW_rework_recovering_economy_4
+					}
+					swap_ideas = {
+						remove_idea = GRW_rework_recovering_economy_4
+						add_idea = GRW_rework_peoples_economy_no_repair
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_indre3
+		}
+	}
+	focus = {
+		id = GRW_rework_armywin
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_armywin_tt
+			hidden_effect = {
+				remove_ideas = GRW_rework_no_regular_army
+				remove_ideas = GRW_rework_no_regular_army_re4
+				remove_ideas = GRW_rework_prywhen_army
+				remove_ideas = GRW_rework_prywhen_army_re4
+				remove_ideas = GRW_rework_prywhen_army_2
+				remove_ideas = GRW_rework_prywhen_army_3
+				add_ideas = GRW_rework_prywhen_army_4
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_armyre4
+			focus = GRW_rework_armyre5
+		}
+	}
+	focus = {
+		id = GRW_rework_thelightofcivilization
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+		cost = 3.7
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.15
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_pol1
+			focus = GRW_rework_pol2
+		}
+	}
+	focus = {
+		id = GRW_rework_knowledge
+		icon = GFX_goal_unknown
+		x = 9
+		y = 5
+		cost = 3.7
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_knowledge_tt
+			add_research_slot = 1
+			add_ideas = GRW_literate_population_idea
+		}
+		prerequisite = {
+			focus = GRW_rework_school
+		}
+		prerequisite = {
+			focus = GRW_rework_likbez2
+		}
+	}
+	focus = {
+		id = GRW_rework_defkgb
+		icon = GFX_goal_unknown
+		x = 17
+		y = 5
+		cost = 3.7
+		completion_reward = {
+			create_intelligence_agency = {
+				name = "R.E.D."
+				icon = GFX_intelligence_agency_logo_sov
+			}
+			add_ideas = GRW_rework_defenders_of_lifestyle_idea
+		}
+		prerequisite = {
+			focus = GRW_rework_happy3
+		}
+	}
+	focus = {
+		id = GRW_rework_smithy
+		icon = GFX_goal_unknown
+		x = 21
+		y = 7
+		cost = 5
+		completion_reward = {
+			set_country_flag = GRW_smithy_active
+			custom_effect_tooltip = GRW_rework_smithy_tt
+			add_ideas = GRW_rework_smithy_law_0
+			set_country_flag = GRW_rework_smithy_unlocked
+			set_variable = {
+				GRW_smithy_scale = 0
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_indre4
+		}
+		prerequisite = {
+			focus = GRW_rework_ind1
+		}
+	}
+	focus = {
+		id = GRW_rework_brighterfuture
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 5
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.16
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_thelightofcivilization
+		}
+		prerequisite = {
+			focus = GRW_rework_knowledge
+		}
+		prerequisite = {
+			focus = GRW_rework_defkgb
+		}
+	}
+	focus = {
+		id = GRW_rework_endtree1
+		icon = GFX_goal_unknown
+		x = 13
+		y = 9
+		cost = 2
+		completion_reward = {
+			custom_effect_tooltip = GRW_rework_endtree1_tt
+			country_event = {
+				id = GRW_rework.17
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_smithy
+		}
+		prerequisite = {
+			focus = GRW_rework_brighterfuture
+		}
+		prerequisite = {
+			focus = GRW_rework_armywin
+		}
+	}
+	focus = {
+		id = GRW_rework_LightofEwi
+		icon = GFX_goal_unknown
+		x = 13
+		y = 10
+		cost = 6
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.18
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_endtree1
+		}
+	}
+	focus = {
+		id = GRW_rework_war
+		icon = GFX_goal_unknown
+		x = 12
+		y = 11
+		cost = 2
+		completion_reward = {
+			if = {
+				limit = {
+					GRU = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = GRU
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					GRY = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = GRY
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					LUS = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = LUS
+					type = annex_everything
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						GRY = {
+							exists = yes
+						}
+					}
+					GRY = {
+						create_faction = ewi_united_front
+						if = {
+							limit = {
+								GRU = {
+									exists = yes
+								}
+							}
+							add_to_faction = GRU
+						}
+						if = {
+							limit = {
+								LUS = {
+									exists = yes
+								}
+							}
+							add_to_faction = LUS
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						GRU = {
+							exists = yes
+						}
+					}
+					GRU = {
+						create_faction = ewi_united_front
+						if = {
+							limit = {
+								LUS = {
+									exists = yes
+								}
+							}
+							add_to_faction = LUS
+						}
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_LightofEwi
+		}
+		mutually_exclusive = {
+			focus = GRW_rework_orpeace
+		}
+	}
+	focus = {
+		id = GRW_rework_orpeace
+		icon = GFX_goal_unknown
+		x = 14
+		y = 11
+		cost = 2
+		completion_reward = {
+			if = {
+				limit = {
+					GRU = {
+						exists = yes
+					}
+				}
+				GRU = {
+					country_event = {
+						id = GRW_rework.19
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					GRY = {
+						exists = yes
+					}
+				}
+				GRY = {
+					country_event = {
+						id = GRW_rework.19
+						hours = 6
+					}
+				}
+			}
+			if = {
+				limit = {
+					LUS = {
+						exists = yes
+					}
+				}
+				LUS = {
+					country_event = {
+						id = GRW_rework.19
+						hours = 6
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_LightofEwi
+		}
+		mutually_exclusive = {
+			focus = GRW_rework_war
+		}
+	}
+	focus = {                                    #ПРОСТО НАДПИСЬ. ОТПРАВНАЯ ТОЧКА
+		id = GRW_rework_thefoundationofewi
+		icon = GFX_goal_unknown
+		x = 13
+		y = 12
+		cost = 10
+		available = {
+			AND = {
+				OR = {
+					NOT = {
+						country_exists = GRU
+					}
+					GRU = {
+						has_capitulated = yes
+						capital_scope = {
+							is_controlled_by = ROOT
+						}
+					}
+				}
+				OR = {
+					NOT = {
+						country_exists = GRY
+					}
+					GRY = {
+						has_capitulated = yes
+						capital_scope = {
+							is_controlled_by = ROOT
+						}
+					}
+				}
+				OR = {
+					NOT = {
+						country_exists = LUS
+					}
+					LUS = {
+						has_capitulated = yes
+						capital_scope = {
+							is_controlled_by = ROOT
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = GRW_rework.22
+				hours = 6
+			}
+		}
+		prerequisite = {
+			focus = GRW_rework_orpeace
+			focus = GRW_rework_war
+		}
+	}
+}

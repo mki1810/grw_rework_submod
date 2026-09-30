@@ -1,0 +1,11 @@
+GRW_rework_smithy_category = {
+	icon = generic_industry
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_completed_focus = GRW_rework_smithy
+	}
+}

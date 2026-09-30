@@ -1,0 +1,6 @@
+﻿spriteTypes = {
+	spriteType = {
+		name = "GFX_GRW_famine_empty_icon"
+		texturefile = "gfx/interface/tiles/tiled_window_transparent.dds"
+	}
+}

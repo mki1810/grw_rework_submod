@@ -1,0 +1,839 @@
+ideas = {
+	country = {
+		GRW_peasant_artels_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.075
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		GRW_last_argument_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_attack_factor = 0.10
+				training_time_army_factor = -0.10
+				war_support_factor = 0.10
+			}
+		}
+		GRW_rework_complete_chaos = {
+			picture = generic_disruption_bonus
+			modifier = {
+				stability_factor = -0.30
+				production_speed_buildings_factor = -0.35
+				consumer_goods_factor = 0.30
+				army_org_regain = -0.10
+				production_factory_max_efficiency_factor = -0.10
+				research_speed_factor = -0.15
+				industrial_capacity_factory = -0.25
+				political_power_gain = -0.25
+				conscription_factor = -0.30
+				generate_wargoal_tension = 1.0
+			}
+		}
+		GRW_rework_new_republic = {
+			picture = generic_democracy_bonus
+			modifier = {
+				stability_factor = 0.10
+				drift_defence_factor = 0.50
+				communism_drift = 0.1
+			}
+		}
+		GRW_rework_recovering_economy = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = -0.20
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.20
+				army_org_regain = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.10
+				industrial_capacity_factory = -0.15
+				political_power_gain = -0.15
+				conscription_factor = -0.20
+				generate_wargoal_tension = 1.0
+			}
+		}
+		GRW_rework_no_regular_army = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = -0.15
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				land_doctrine_cost_factor = 0.20
+				training_time_army_factor = 0.20
+			}
+		}
+		GRW_rework_no_regular_army_re4 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = -0.15
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				land_doctrine_cost_factor = 0.20
+				training_time_army_factor = 0.20
+				breakthrough_factor = 0.10
+				max_dig_in = 3
+				dig_in_speed_factor = 0.075
+			}
+		}
+		GRW_rework_prywhen_army = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = -0.10
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				land_doctrine_cost_factor = 0.15
+				training_time_army_factor = 0.15
+			}
+		}
+		GRW_rework_prywhen_army_re4 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = -0.10
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				land_doctrine_cost_factor = 0.15
+				training_time_army_factor = 0.15
+				breakthrough_factor = 0.10
+				max_dig_in = 3
+				dig_in_speed_factor = 0.075
+			}
+		}
+		GRW_rework_prywhen_army_2 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				land_doctrine_cost_factor = 0.10
+				training_time_army_factor = 0.10
+				planning_speed = 0.10
+				max_planning = 0.05
+			}
+		}
+		GRW_rework_armyreform3 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				generate_wargoal_tension = -1.0
+				send_volunteer_size = 3
+				send_volunteer_divisions_required = -0.3
+				justify_war_goal_time = -0.25
+				conscription = 0.005
+			}
+		}
+		
+		GRW_rework_prywhen_army_4 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.10
+				max_planning = 0.05
+				breakthrough_factor = 0.10
+				max_dig_in = 3
+				dig_in_speed_factor = 0.075
+			}
+		}
+		GRW_rework_prywhen_army_3 = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				land_doctrine_cost_factor = 0.10
+				training_time_army_factor = 0.10
+				planning_speed = 0.10
+				max_planning = 0.05
+				breakthrough_factor = 0.10
+				max_dig_in = 3
+				dig_in_speed_factor = 0.075
+			}
+		}
+		GRW_ray_of_truth_idea = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.05
+			}
+		}
+		GRW_ray_of_truth_idea_2 = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				political_power_gain = 0.20
+				research_speed_factor = 0.05
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		GRW_ray_of_truth_idea_3 = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				political_power_gain = 0.20
+				research_speed_factor = 0.05
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.03
+				conscription_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		GRW_ray_of_truth_idea_4 = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.05
+				conscription_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		GRW_rework_central_committee = {
+			picture = generic_political_discourse_bonus
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				communism_drift = 0.05
+			}
+		}
+		GRW_rework_agrarian_reform_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.025
+				industrial_capacity_factory = 0.025
+				industry_free_repair_factor = 0.25
+				consumer_goods_factor = -0.10
+			}
+		}
+		GRW_literate_population_idea = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		GRW_rework_recovering_economy_2 = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = -0.20
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.20
+				army_org_regain = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.10
+				industrial_capacity_factory = -0.15
+				political_power_gain = -0.15
+				conscription_factor = -0.20
+				generate_wargoal_tension = 1.0
+				industry_free_repair_factor = 0.25
+			}
+		}
+		GRW_rework_recovering_economy_3 = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = -0.10
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.10
+				army_org_regain = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.05
+				industrial_capacity_factory = -0.075
+				political_power_gain = -0.15
+				conscription_factor = -0.10
+				generate_wargoal_tension = 1.0
+				industry_free_repair_factor = 0.25
+			}
+		}
+		GRW_rework_recovering_economy_4 = {
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = -0.10
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.10
+				army_org_regain = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.05
+				industrial_capacity_factory = -0.075
+				political_power_gain = -0.15
+				conscription_factor = -0.10
+				generate_wargoal_tension = 1.0
+			}
+		}
+		GRW_rework_peoples_economy = {
+			picture = generic_production_bonus
+			modifier = {
+				generate_wargoal_tension = 1.0
+				industry_free_repair_factor = 0.25
+			}
+		}
+		GRW_rework_prywhen_airforce = {
+			picture = generic_air_bonus
+			modifier = {
+				air_ace_generation_chance_factor = 0.1
+				air_night_penalty = -0.1
+				air_weather_penalty = -0.1
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		GRW_rework_welfare_state = {
+			picture = generic_welfare
+			modifier = {
+				monthly_population = 0.20
+				consumer_goods_factor = 0.03
+				research_speed_factor = 0.02
+			}
+		}
+		GRW_rework_welfare_state_2 = {
+			picture = generic_welfare
+			modifier = {
+				monthly_population = 0.20
+				consumer_goods_factor = 0.10
+				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_start_efficiency_factor = 0.03
+				line_change_production_efficiency_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		GRW_rework_north_experience = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				stability_factor = 0.05
+				communism_drift = 0.01
+				political_power_gain = 0.05
+				production_speed_buildings_factor = 0.02
+			}
+		}
+		GRW_rework_own_path = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				war_support_factor = 0.05
+				industrial_capacity_factory = 0.03
+				conscription_factor = 0.05
+				communism_drift = 0.01
+			}
+		}
+		GRW_rework_defenders_of_lifestyle_idea = {
+			picture = generic_intelligence_bonus
+			modifier = {
+				conscription = 0.02
+				resistance_damage_to_garrison = -0.25
+				foreign_subversive_activites = -0.3
+				operative_slot = 1
+				political_power_gain = -0.05
+			}
+		}
+		GRW_rework_welfare_upgrade = {
+			picture = generic_welfare
+			modifier = {
+				consumer_goods_factor = 0.07
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		GRW_rework_happy_upgrade = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				political_power_gain = 0.05
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		GRW_rework_happy2_upgrade = {
+			picture = generic_intel_bonus
+		custom_modifier_tooltip = GRW_light_of_ewi_idea_tt
+			modifier = {
+				conscription_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		GRW_rework_armyre4_upgrade = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				breakthrough_factor = 0.10
+				max_dig_in = 3
+				dig_in_speed_factor = 0.075
+			}
+		}
+
+		GRW_rework_peoples_economy_no_repair = {
+			picture = generic_production_bonus
+			modifier = {
+				generate_wargoal_tension = 1.0
+			}
+		}
+
+		GRW_rework_indre2_upgrade = {
+			picture = generic_production_bonus
+			modifier = {
+				industry_free_repair_factor = 0.25
+			}
+		}
+	}
+	economy = {
+		law = yes
+		use_list_view = yes
+		GRW_rework_smithy_law_0 = {                   # Грубо но работает
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_1 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.035
+				production_speed_buildings_factor = -0.05
+				consumer_goods_expected_value = 0.27
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_2 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.07
+				production_speed_buildings_factor = -0.1
+				consumer_goods_expected_value = 0.29
+				production_factory_efficiency_gain_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_3 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.105
+				production_speed_buildings_factor = -0.15
+				consumer_goods_expected_value = 0.31
+				production_factory_efficiency_gain_factor = -0.15
+				line_change_production_efficiency_factor = -0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_4 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.14
+				production_speed_buildings_factor = -0.2
+				consumer_goods_expected_value = 0.33
+				production_factory_efficiency_gain_factor = -0.2
+				line_change_production_efficiency_factor = -0.2
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_5 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.175
+				production_speed_buildings_factor = -0.25
+				consumer_goods_expected_value = 0.35
+				production_factory_efficiency_gain_factor = -0.25
+				line_change_production_efficiency_factor = -0.25
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_6 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.21
+				production_speed_buildings_factor = -0.3
+				consumer_goods_expected_value = 0.37
+				production_factory_efficiency_gain_factor = -0.3
+				line_change_production_efficiency_factor = -0.3
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_7 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.245
+				production_speed_buildings_factor = -0.35
+				consumer_goods_expected_value = 0.39
+				production_factory_efficiency_gain_factor = -0.35
+				line_change_production_efficiency_factor = -0.35
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_8 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.28
+				production_speed_buildings_factor = -0.4
+				consumer_goods_expected_value = 0.41
+				production_factory_efficiency_gain_factor = -0.4
+				line_change_production_efficiency_factor = -0.4
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_9 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.315
+				production_speed_buildings_factor = -0.45
+				consumer_goods_expected_value = 0.43
+				production_factory_efficiency_gain_factor = -0.45
+				line_change_production_efficiency_factor = -0.45
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_vol_10 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.35
+				production_speed_buildings_factor = -0.5
+				consumer_goods_expected_value = 0.45
+				production_factory_efficiency_gain_factor = -0.5
+				line_change_production_efficiency_factor = -0.5
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_1 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.03
+				production_speed_buildings_factor = 0.05
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.04
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_2 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.06
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.08
+				production_factory_efficiency_gain_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_3 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.09
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.12
+				production_factory_efficiency_gain_factor = -0.15
+				line_change_production_efficiency_factor = -0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_4 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.12
+				production_speed_buildings_factor = 0.2
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.16
+				production_factory_efficiency_gain_factor = -0.2
+				line_change_production_efficiency_factor = -0.2
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_5 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = 0.25
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.25
+				line_change_production_efficiency_factor = -0.25
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_6 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.18
+				production_speed_buildings_factor = 0.3
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.24
+				production_factory_efficiency_gain_factor = -0.3
+				line_change_production_efficiency_factor = -0.3
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_7 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.21
+				production_speed_buildings_factor = 0.35
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.28
+				production_factory_efficiency_gain_factor = -0.35
+				line_change_production_efficiency_factor = -0.35
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_8 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.24
+				production_speed_buildings_factor = 0.4
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.32
+				production_factory_efficiency_gain_factor = -0.4
+				line_change_production_efficiency_factor = -0.4
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_9 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.27
+				production_speed_buildings_factor = 0.45
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.36
+				production_factory_efficiency_gain_factor = -0.45
+				line_change_production_efficiency_factor = -0.45
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		GRW_rework_smithy_law_con_10 = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			available = { always = no }
+			cancel_if_invalid = no
+			allowed_to_remove = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = 0.5
+				consumer_goods_expected_value = 0.25
+				consumer_goods_factor = -0.4
+				production_factory_efficiency_gain_factor = -0.5
+				line_change_production_efficiency_factor = -0.5
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+				conversion_cost_mil_to_civ_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+	}
+    country = {
+	    GRW_light_of_ewi_idea = {
+		    picture = generic_intel_bonus
+		    modifier = {
+			    army_attack_factor = 0.05
+			    army_defence_factor = 0.05
+		    }
+	    }
+		GRW_economy_shock1 = {
+			picture = generic_goods_red
+		    modifier = {
+			    stability_factor = 0.1
+		    }
+		}
+		GRW_hq_shock1 = {
+			picture = generic_goods_red
+		    modifier = {
+			
+		    }
+		}
+		GRW_administrative_shock1 = {
+			picture = generic_goods_red
+		    modifier = {
+			
+		    }
+		}
+    }
+}
