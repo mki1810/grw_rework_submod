@@ -826,7 +826,7 @@ ideas = {
 		GRW_hq_shock1 = {
 			picture = generic_goods_red
 		    modifier = {
-			
+			    stability_factor = -0.1
 		    }
 		}
 		GRW_administrative_shock1 = {
