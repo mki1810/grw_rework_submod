@@ -820,19 +820,26 @@ ideas = {
 		GRW_economy_shock1 = {
 			picture = generic_goods_red
 		    modifier = {
-			    stability_factor = 0.1
+				consumer_goods_factor = 0.7
+				production_speed_buildings_factor = -0.25
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = 0.2
 		    }
 		}
 		GRW_hq_shock1 = {
 			picture = generic_goods_red
 		    modifier = {
-			    stability_factor = -0.1
+			    conscription_factor = -0.3
+				army_org_factor = -0.15
+				planning_speed = -0.5
+				max_planning = -0.2
 		    }
 		}
 		GRW_administrative_shock1 = {
 			picture = generic_goods_red
 		    modifier = {
-			
+			    stability_factor = -0.5
+				political_power_gain = -1.0
 		    }
 		}
     }
