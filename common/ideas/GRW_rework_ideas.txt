@@ -842,5 +842,80 @@ ideas = {
 				political_power_gain = -1.0
 		    }
 		}
+		GRW_economy_shock2 = {
+			picture = generic_goods_red
+		    modifier = {
+				consumer_goods_factor = 0.55
+				production_speed_buildings_factor = -0.20
+				production_factory_max_efficiency_factor = -0.075
+				industrial_capacity_factory = 0.15
+		    }
+		}
+		GRW_hq_shock2 = {
+			picture = generic_goods_red
+		    modifier = {
+			    conscription_factor = -0.2
+				army_org_factor = -0.10
+				planning_speed = -0.4
+				max_planning = -0.15
+		    }
+		}
+		GRW_administrative_shock2 = {
+			picture = generic_goods_red
+		    modifier = {
+			    stability_factor = -0.35
+				political_power_gain = -0.75
+		    }
+		}
+		GRW_economy_shock3 = {
+			picture = generic_goods_red
+		    modifier = {
+				consumer_goods_factor = 0.40
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = 0.10
+		    }
+		}
+		GRW_hq_shock3 = {
+			picture = generic_goods_red
+		    modifier = {
+			    conscription_factor = -0.1
+				army_org_factor = -0.05
+				planning_speed = -0.3
+				max_planning = -0.05
+		    }
+		}
+		GRW_administrative_shock3 = {
+			picture = generic_goods_red
+		    modifier = {
+			    stability_factor = -0.20
+				political_power_gain = -0.5
+		    }
+		}
+		GRW_economy_shock4 = {
+			picture = generic_goods_red
+		    modifier = {
+				consumer_goods_factor = 0.20
+				production_speed_buildings_factor = -0.10
+				production_factory_max_efficiency_factor = -0.025
+				industrial_capacity_factory = 0.05
+		    }
+		}
+		GRW_hq_shock4 = {
+			picture = generic_goods_red
+		    modifier = {
+			    conscription_factor = -0.05
+				army_org_factor = -0.02
+				planning_speed = -0.15
+				max_planning = -0.02
+		    }
+		}
+		GRW_administrative_shock4 = {
+			picture = generic_goods_red
+		    modifier = {
+			    stability_factor = -0.10
+				political_power_gain = -0.25
+		    }
+		}
     }
 }
