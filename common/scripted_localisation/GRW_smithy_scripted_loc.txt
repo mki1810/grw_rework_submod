@@ -1,0 +1,14 @@
+defined_text = {
+	name = GRW_smithy_mode_loc
+	text = {
+		trigger = { check_variable = { GRW_smithy_scale > 0 } }
+		localization_key = GRW_smithy_mode_prod
+	}
+	text = {
+		trigger = { check_variable = { GRW_smithy_scale < 0 } }
+		localization_key = GRW_smithy_mode_con
+	}
+	text = {
+		localization_key = GRW_smithy_mode_balanced
+	}
+}

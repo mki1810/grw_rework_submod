@@ -1,0 +1,72 @@
+GRW_update_smithy_ideas_effect = {
+	if = { limit = { check_variable = { GRW_smithy_scale = 0 } } add_ideas = GRW_rework_smithy_law_0 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 1 } } add_ideas = GRW_rework_smithy_law_vol_1 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 2 } } add_ideas = GRW_rework_smithy_law_vol_2 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 3 } } add_ideas = GRW_rework_smithy_law_vol_3 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 4 } } add_ideas = GRW_rework_smithy_law_vol_4 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 5 } } add_ideas = GRW_rework_smithy_law_vol_5 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 6 } } add_ideas = GRW_rework_smithy_law_vol_6 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 7 } } add_ideas = GRW_rework_smithy_law_vol_7 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 8 } } add_ideas = GRW_rework_smithy_law_vol_8 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 9 } } add_ideas = GRW_rework_smithy_law_vol_9 }
+	if = { limit = { check_variable = { GRW_smithy_scale = 10 } } add_ideas = GRW_rework_smithy_law_vol_10 }
+	
+	if = { limit = { check_variable = { GRW_smithy_scale = -1 } } add_ideas = GRW_rework_smithy_law_con_1 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -2 } } add_ideas = GRW_rework_smithy_law_con_2 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -3 } } add_ideas = GRW_rework_smithy_law_con_3 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -4 } } add_ideas = GRW_rework_smithy_law_con_4 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -5 } } add_ideas = GRW_rework_smithy_law_con_5 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -6 } } add_ideas = GRW_rework_smithy_law_con_6 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -7 } } add_ideas = GRW_rework_smithy_law_con_7 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -8 } } add_ideas = GRW_rework_smithy_law_con_8 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -9 } } add_ideas = GRW_rework_smithy_law_con_9 }
+	if = { limit = { check_variable = { GRW_smithy_scale = -10 } } add_ideas = GRW_rework_smithy_law_con_10 }
+}
+
+GRW_update_smithy_display_vars_effect = {
+	set_variable = { GRW_smithy_disp_prod = 0 }
+	set_variable = { GRW_smithy_disp_con = 0 }
+	set_variable = { GRW_smithy_disp_cg_factor = 0 }
+	set_variable = { GRW_smithy_disp_cg_expected = 0 }
+	set_variable = { GRW_smithy_disp_eff = 0 }
+
+	set_variable = { GRW_smithy_level = GRW_smithy_scale }
+	if = {
+		limit = { check_variable = { GRW_smithy_scale < 0 } }
+		multiply_variable = { GRW_smithy_level = -1 }
+	}
+
+	if = {
+		limit = { check_variable = { GRW_smithy_scale > 0 } }
+		set_variable = { GRW_smithy_disp_prod = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_prod = 0.035 }
+
+		set_variable = { GRW_smithy_disp_con = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_con = -0.05 }
+
+		set_variable = { GRW_smithy_disp_cg_expected = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_cg_expected = 0.02 }
+
+		set_variable = { GRW_smithy_disp_eff = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_eff = -0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { GRW_smithy_scale < 0 } }
+		set_variable = { GRW_smithy_disp_prod = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_prod = 0.03 }
+
+		set_variable = { GRW_smithy_disp_con = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_con = -0.05 }
+
+		set_variable = { GRW_smithy_disp_cg_factor = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_cg_factor = 0.04 }
+
+		set_variable = { GRW_smithy_disp_eff = GRW_smithy_scale }
+		multiply_variable = { GRW_smithy_disp_eff = 0.05 }
+	}
+}
+
+GRW_smithy_refresh_effect = {
+	GRW_update_smithy_ideas_effect = yes
+	GRW_update_smithy_display_vars_effect = yes
+}

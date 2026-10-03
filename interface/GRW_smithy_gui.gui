@@ -1,0 +1,411 @@
+guiTypes = {
+	containerWindowType = {
+		name = "GRW_smithy_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 290 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		instantTextBoxType = {
+			name = "smithy_title"
+			position = { x = 0 y = 10 }
+			font = "hoi_18mbs"
+			text = "GRW_smithy_title"
+			format = center
+			maxWidth = 520
+			maxHeight = 22
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "icon_construction"
+			spriteType = "GFX_decision_generic_construction"
+			position = { x = 24 y = 36 }
+		}
+
+		iconType = {
+			name = "icon_factory"
+			spriteType = "GFX_decision_generic_factory"
+			position = { x = 450 y = 36 }
+		}
+
+		instantTextBoxType = {
+			name = "smithy_level_text"
+			position = { x = 100 y = 42 }
+			font = "hoi_24header"
+			text = "GRW_smithy_level_text"
+			format = center
+			maxWidth = 320
+			maxHeight = 26
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "smithy_mode_text"
+			position = { x = 80 y = 74 }
+			font = "hoi_16mbs"
+			text = "GRW_smithy_mode_text"
+			format = center
+			maxWidth = 360
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "smithy_label_con"
+			position = { x = 20 y = 104 }
+			font = "hoi_16mbs"
+			text = "GRW_smithy_label_con"
+			format = right
+			maxWidth = 122
+			maxHeight = 18
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "smithy_label_prod"
+			position = { x = 371 y = 104 }
+			font = "hoi_16mbs"
+			text = "GRW_smithy_label_prod"
+			format = left
+			maxWidth = 130
+			maxHeight = 18
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "pip_con_1_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 240 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_1_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 240 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_2_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 230 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_2_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 230 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_3_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 220 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_3_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 220 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_4_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 210 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_4_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 210 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_5_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 200 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_5_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 200 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_6_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 190 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_6_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 190 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_7_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 180 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_7_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 180 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_8_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 170 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_8_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 170 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_9_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 160 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_9_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 160 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_con_10_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 150 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_con_10_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 150 y = 104 }
+			frame = 1
+		}
+
+		iconType = {
+			name = "pip_prod_1_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 263 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_1_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 263 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_2_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 273 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_2_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 273 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_3_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 283 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_3_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 283 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_4_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 293 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_4_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 293 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_5_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 303 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_5_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 303 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_6_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 313 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_6_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 313 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_7_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 323 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_7_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 323 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_8_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 333 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_8_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 333 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_9_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 343 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_9_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 343 y = 104 }
+			frame = 2
+		}
+
+		iconType = {
+			name = "pip_prod_10_empty"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 353 y = 104 }
+			frame = 4
+		}
+
+		iconType = {
+			name = "pip_prod_10_full"
+			spriteType = "GFX_building_level_bar"
+			position = { x = 353 y = 104 }
+			frame = 2
+		}
+
+		buttonType = {        # в темп
+			name = "btn_con"
+			position = { x = 30 y = 132 }
+			spriteType = "GFX_button_148x34"
+			buttonText = "GRW_smithy_btn_con"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "GRW_smithy_btn_con_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {        # ресет
+			name = "btn_reset"
+			position = { x = 186 y = 132 }
+			spriteType = "GFX_button_148x34"
+			buttonText = "GRW_smithy_btn_reset"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "GRW_smithy_btn_reset_tt"
+			clicksound = click_default
+		}
+
+		buttonType = {         # в обьем
+			name = "btn_prod"
+			position = { x = 342 y = 132 }
+			spriteType = "GFX_button_148x34"
+			buttonText = "GRW_smithy_btn_prod"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "GRW_smithy_btn_prod_tt"
+			clicksound = click_default
+		}
+
+		instantTextBoxType = {
+			name = "smithy_stats_header"
+			position = { x = 30 y = 176 }
+			font = "hoi_18mbs"
+			text = "GRW_smithy_stats_header"
+			format = center
+			maxWidth = 460
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "smithy_stats_text"
+			position = { x = 30 y = 198 }
+			font = "hoi_16mbs"
+			text = "GRW_smithy_stats_text"
+			format = center
+			maxWidth = 460
+			maxHeight = 120
+			fixedsize = yes
+		}
+	}
+}

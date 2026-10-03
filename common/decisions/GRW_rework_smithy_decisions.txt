@@ -1,151 +1,21 @@
-GRW_rework_smithy_category = { #ШАЙТАН МАШИНА НА IF, КАК МНЕ ПРЕПОД ГОВОРИЛ ПО ПЛЮСАМ "НАХУЯ СТОЛЬКО IF?????"
-
-	GRW_smithy_increase_volume = {
-		icon = generic_factory
-		cost = 15
+GRW_rework_smithy_category = {
+	GRW_smithy_info = {
+		icon = generic_industry
+		cost = 0
 		fire_only_once = no
 
 		visible = {
-			check_variable = { GRW_smithy_scale < 10 }
-			NOT = { check_variable = { GRW_smithy_scale < 0 } }
+			has_country_flag = GRW_rework_smithy_unlocked
 		}
 
 		available = {
-			check_variable = { GRW_smithy_scale < 10 }
+			always = no
 		}
 
-		complete_effect = {
-			add_to_variable = { GRW_smithy_scale = 1 }
-			custom_effect_tooltip = GRW_smithy_increase_volume_tt
-			hidden_effect = {
-				if = { limit = { check_variable = { GRW_smithy_scale = 1 } } add_ideas = GRW_rework_smithy_law_vol_1 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 2 } } add_ideas = GRW_rework_smithy_law_vol_2 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 3 } } add_ideas = GRW_rework_smithy_law_vol_3 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 4 } } add_ideas = GRW_rework_smithy_law_vol_4 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 5 } } add_ideas = GRW_rework_smithy_law_vol_5 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 6 } } add_ideas = GRW_rework_smithy_law_vol_6 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 7 } } add_ideas = GRW_rework_smithy_law_vol_7 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 8 } } add_ideas = GRW_rework_smithy_law_vol_8 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 9 } } add_ideas = GRW_rework_smithy_law_vol_9 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 10 } } add_ideas = GRW_rework_smithy_law_vol_10 }
-			}
-		}
-	}
+		complete_effect = { }
 
-	GRW_smithy_decrease_volume = {
-		icon = generic_factory
-		cost = 15
-		fire_only_once = no
-
-		visible = {
-			check_variable = { GRW_smithy_scale > 0 }
-		}
-
-		available = {
-			check_variable = { GRW_smithy_scale > 0 }
-		}
-
-		complete_effect = {
-			subtract_from_variable = { GRW_smithy_scale = 1 }
-			custom_effect_tooltip = GRW_smithy_decrease_volume_tt
-			hidden_effect = {
-				if = { limit = { check_variable = { GRW_smithy_scale = 0 } } add_ideas = GRW_rework_smithy_law_0 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 1 } } add_ideas = GRW_rework_smithy_law_vol_1 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 2 } } add_ideas = GRW_rework_smithy_law_vol_2 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 3 } } add_ideas = GRW_rework_smithy_law_vol_3 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 4 } } add_ideas = GRW_rework_smithy_law_vol_4 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 5 } } add_ideas = GRW_rework_smithy_law_vol_5 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 6 } } add_ideas = GRW_rework_smithy_law_vol_6 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 7 } } add_ideas = GRW_rework_smithy_law_vol_7 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 8 } } add_ideas = GRW_rework_smithy_law_vol_8 }
-				if = { limit = { check_variable = { GRW_smithy_scale = 9 } } add_ideas = GRW_rework_smithy_law_vol_9 }
-			}
-		}
-	}
-
-	GRW_smithy_increase_construction = {
-		icon = generic_construction
-		cost = 15
-		fire_only_once = no
-
-		visible = {
-			check_variable = { GRW_smithy_scale > -10 }
-			NOT = { check_variable = { GRW_smithy_scale > 0 } }
-		}
-
-		available = {
-			check_variable = { GRW_smithy_scale > -10 }
-		}
-
-		complete_effect = {
-			subtract_from_variable = { GRW_smithy_scale = 1 }
-			custom_effect_tooltip = GRW_smithy_increase_construction_tt
-			hidden_effect = {
-				if = { limit = { check_variable = { GRW_smithy_scale = -1 } } add_ideas = GRW_rework_smithy_law_con_1 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -2 } } add_ideas = GRW_rework_smithy_law_con_2 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -3 } } add_ideas = GRW_rework_smithy_law_con_3 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -4 } } add_ideas = GRW_rework_smithy_law_con_4 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -5 } } add_ideas = GRW_rework_smithy_law_con_5 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -6 } } add_ideas = GRW_rework_smithy_law_con_6 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -7 } } add_ideas = GRW_rework_smithy_law_con_7 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -8 } } add_ideas = GRW_rework_smithy_law_con_8 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -9 } } add_ideas = GRW_rework_smithy_law_con_9 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -10 } } add_ideas = GRW_rework_smithy_law_con_10 }
-			}
-		}
-	}
-
-	GRW_smithy_decrease_construction = {
-		icon = generic_construction
-		cost = 15
-		fire_only_once = no
-
-		visible = {
-			check_variable = { GRW_smithy_scale < 0 }
-		}
-
-		available = {
-			check_variable = { GRW_smithy_scale < 0 }
-		}
-
-		complete_effect = {
-			add_to_variable = { GRW_smithy_scale = 1 }
-			custom_effect_tooltip = GRW_smithy_decrease_construction_tt
-			hidden_effect = {
-				if = { limit = { check_variable = { GRW_smithy_scale = 0 } } add_ideas = GRW_rework_smithy_law_0 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -1 } } add_ideas = GRW_rework_smithy_law_con_1 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -2 } } add_ideas = GRW_rework_smithy_law_con_2 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -3 } } add_ideas = GRW_rework_smithy_law_con_3 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -4 } } add_ideas = GRW_rework_smithy_law_con_4 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -5 } } add_ideas = GRW_rework_smithy_law_con_5 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -6 } } add_ideas = GRW_rework_smithy_law_con_6 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -7 } } add_ideas = GRW_rework_smithy_law_con_7 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -8 } } add_ideas = GRW_rework_smithy_law_con_8 }
-				if = { limit = { check_variable = { GRW_smithy_scale = -9 } } add_ideas = GRW_rework_smithy_law_con_9 }
-			}
-		}
-	}
-
-
-
-	GRW_smithy_reset = {
-		icon = generic_factory
-		cost = 100
-		fire_only_once = no
-
-		visible = {
-			NOT = { check_variable = { GRW_smithy_scale = 0 } }
-		}
-
-		available = {
-			NOT = { check_variable = { GRW_smithy_scale = 0 } }
-		}
-
-		complete_effect = {
-			set_variable = { GRW_smithy_scale = 0 }
-			hidden_effect = {
-				add_ideas = GRW_rework_smithy_law_0
-			}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

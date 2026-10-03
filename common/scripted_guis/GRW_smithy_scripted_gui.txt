@@ -1,0 +1,63 @@
+scripted_gui = {
+	GRW_smithy_ui = {
+		context_type = decision_category
+		window_name = "GRW_smithy_ui_window"
+
+		visible = {
+			has_country_flag = GRW_rework_smithy_unlocked
+		}
+
+		triggers = {
+			btn_con_click_enabled = {
+				check_variable = { GRW_smithy_scale > -10 }
+				has_political_power > 14.99
+			}
+			btn_prod_click_enabled = {
+				check_variable = { GRW_smithy_scale < 10 }
+				has_political_power > 14.99
+			}
+			btn_reset_click_enabled = {
+				NOT = { check_variable = { GRW_smithy_scale = 0 } }
+				has_political_power > 99.99
+			}
+			pip_con_1_full_visible = { check_variable = { GRW_smithy_scale < 0 } }
+			pip_prod_1_full_visible = { check_variable = { GRW_smithy_scale > 0 } }
+			pip_con_2_full_visible = { check_variable = { GRW_smithy_scale < -1 } }
+			pip_prod_2_full_visible = { check_variable = { GRW_smithy_scale > 1 } }
+			pip_con_3_full_visible = { check_variable = { GRW_smithy_scale < -2 } }
+			pip_prod_3_full_visible = { check_variable = { GRW_smithy_scale > 2 } }
+			pip_con_4_full_visible = { check_variable = { GRW_smithy_scale < -3 } }
+			pip_prod_4_full_visible = { check_variable = { GRW_smithy_scale > 3 } }
+			pip_con_5_full_visible = { check_variable = { GRW_smithy_scale < -4 } }
+			pip_prod_5_full_visible = { check_variable = { GRW_smithy_scale > 4 } }
+			pip_con_6_full_visible = { check_variable = { GRW_smithy_scale < -5 } }
+			pip_prod_6_full_visible = { check_variable = { GRW_smithy_scale > 5 } }
+			pip_con_7_full_visible = { check_variable = { GRW_smithy_scale < -6 } }
+			pip_prod_7_full_visible = { check_variable = { GRW_smithy_scale > 6 } }
+			pip_con_8_full_visible = { check_variable = { GRW_smithy_scale < -7 } }
+			pip_prod_8_full_visible = { check_variable = { GRW_smithy_scale > 7 } }
+			pip_con_9_full_visible = { check_variable = { GRW_smithy_scale < -8 } }
+			pip_prod_9_full_visible = { check_variable = { GRW_smithy_scale > 8 } }
+			pip_con_10_full_visible = { check_variable = { GRW_smithy_scale < -9 } }
+			pip_prod_10_full_visible = { check_variable = { GRW_smithy_scale > 9 } }
+		}
+
+		effects = {
+			btn_con_click = {
+				add_political_power = -15
+				subtract_from_variable = { GRW_smithy_scale = 1 }
+				GRW_smithy_refresh_effect = yes
+			}
+			btn_prod_click = {
+				add_political_power = -15
+				add_to_variable = { GRW_smithy_scale = 1 }
+				GRW_smithy_refresh_effect = yes
+			}
+			btn_reset_click = {
+				add_political_power = -100
+				set_variable = { GRW_smithy_scale = 0 }
+				GRW_smithy_refresh_effect = yes
+			}
+		}
+	}
+}

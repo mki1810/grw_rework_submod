@@ -1,5 +1,6 @@
 GRW_rework_smithy_category = {
 	icon = generic_industry
+	scripted_gui = GRW_smithy_ui
 
 	allowed = {
 		always = yes

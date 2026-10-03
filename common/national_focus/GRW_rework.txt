@@ -1408,6 +1408,7 @@ focus_tree = {
 			set_variable = {
 				GRW_smithy_scale = 0
 			}
+			hidden_effect = { GRW_update_smithy_display_vars_effect = yes }
 		}
 		prerequisite = {
 			focus = GRW_rework_indre4
